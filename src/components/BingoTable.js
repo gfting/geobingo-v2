@@ -51,8 +51,8 @@ class BingoTable extends React.Component {
 					<tbody>
 						<tr>
 							{this.state.boardState[0].map(prompt => {
-								const row = <EditableLabel key={1} text={prompt}></EditableLabel>;
-								return <td key="1">{row}</td>;
+								const row = <EditableLabel text={prompt}></EditableLabel>;
+								return <td key={prompt}>{row}</td>;
 								// const row = <EditableLabel text={prompt}></EditableLabel>;
 								// return <button key="0" onDoubleClick={this.handleClick}>{<td key="0">{row}</td>}</button>;
 							})}
@@ -60,25 +60,25 @@ class BingoTable extends React.Component {
 						<tr>
 							{this.state.boardState[1].map(prompt => {
 								const row = <EditableLabel text={prompt}></EditableLabel>;
-								return <td key="1">{row}</td>;
+								return <td key={prompt}>{row}</td>;
 							})}
 						</tr>
 						<tr>
 							{this.state.boardState[2].map(prompt => {
 								const row = <EditableLabel text={prompt}></EditableLabel>;
-								return <td key="2">{row}</td>;
+								return <td key={prompt}>{row}</td>;
 							})}
 						</tr>
 						<tr>
 							{this.state.boardState[3].map(prompt => {
 								const row = <EditableLabel text={prompt}></EditableLabel>;
-								return <td key="3">{row}</td>;
+								return <td key={prompt}>{row}</td>;
 							})}
 						</tr>
 						<tr>
 							{this.state.boardState[4].map(prompt => {
 								const row = <EditableLabel text={prompt}></EditableLabel>;
-								return <td key="4">{row}</td>;
+								return <td key={prompt}>{row}</td>;
 							})}
 						</tr>
 					</tbody>
