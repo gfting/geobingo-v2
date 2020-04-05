@@ -34,7 +34,12 @@ input {
 .w85 {
   width: 85%;
 }
-
+.center {
+  justify-content:center;
+}
+.centerButton {
+  align-items:center;
+}
 .button {
   font-family: monospace;
   font-size: 10pt;

@@ -83,7 +83,13 @@ class BingoTable extends React.Component {
 						</tr>
 					</tbody>
 				</Table>
-				<Button onClick={this.handleSubmitForm}>Submit</Button>
+				<p></p>
+				<div className="flex flex-fixed">				
+				<div className="center black background-gray fw7 mr1">Just screenshot and share with your friends!</div>
+				</div>
+				<p></p>
+				<div className="flex center"><Button onClick={this.handleSubmitForm}>Submit</Button></div>
+				<p></p>
 			</div>
 		);
 	}
