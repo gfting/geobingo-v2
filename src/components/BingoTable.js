@@ -1,9 +1,11 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import BingoCell from './BingoCell';
+import EditableLabel from 'react-inline-editing';
 
 class BingoTable extends React.Component {
     state = {
-        list: [],
+        list: [['Empty','Empty','Empty','Empty','Empty'],['Empty','Empty','Empty','Empty','Empty'],['Empty','Empty','Free Space','Empty','Empty'],['Empty','Empty','Empty','Empty','Empty'],['Empty','Empty','Empty','Empty','Empty']],
         maxLength: 24,
     }
 
@@ -18,18 +20,46 @@ class BingoTable extends React.Component {
             });
     }
 
+    handleClick = e => {
+        e.preventDefault();
+        alert(e.target.elements.option.value);
+    }
+
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmitForm}>
-                    <input type="text" placeholder="Add Your Ideas Here" name="prompt"/>
-                    <button>Add Option</button>
-                </form>
-                <Table>
+                <Table striped bordered variant="light">
                     <tbody>
                     <tr>
-                    {this.state.list.map((prompt)=> {
-                        return <td key={prompt}>{prompt}</td>;
+                    {this.state.list[0].map((prompt)=> {
+                        const row = <EditableLabel text={prompt}></EditableLabel>;
+                        return <td key="1">{row}</td>;
+                        // const row = <EditableLabel text={prompt}></EditableLabel>;
+                        // return <button key="0" onDoubleClick={this.handleClick}>{<td key="0">{row}</td>}</button>;
+                    })}
+                    </tr>
+                    <tr>
+                    {this.state.list[1].map((prompt)=> {
+                        const row = <EditableLabel text={prompt}></EditableLabel>;
+                        return <td key="1">{row}</td>;
+                    })}
+                    </tr>
+                    <tr>
+                    {this.state.list[2].map((prompt)=> {
+                        const row = <EditableLabel text={prompt}></EditableLabel>;
+                        return <td key="2">{row}</td>;
+                    })}
+                    </tr>
+                    <tr>
+                    {this.state.list[3].map((prompt)=> {
+                        const row = <EditableLabel text={prompt}></EditableLabel>;
+                        return <td key="3">{row}</td>;
+                    })}
+                    </tr>
+                    <tr>
+                    {this.state.list[4].map((prompt)=> {
+                        const row = <EditableLabel text={prompt}></EditableLabel>;
+                        return <td key="4">{row}</td>;
                     })}
                     </tr>
                     </tbody>
