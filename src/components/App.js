@@ -22,7 +22,7 @@ class App extends Component {
 						<Route exact path="/top" component={LinkList} />
 						<Route exact path="/new/:page" component={LinkList} />
 						<Route exact path="/test" component={BingoTitleForm} />
-						<Route exact path="/test2" component={BingoTable}/>
+						<Route exact path="/test2" component={BingoTable} />
 					</Switch>
 				</div>
 			</div>
