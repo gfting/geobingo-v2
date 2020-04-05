@@ -4,6 +4,8 @@ import gql from 'graphql-tag'
 import { FEED_QUERY } from './LinkList'
 import { LINKS_PER_PAGE } from '../constants'
 
+/* eslint-disable */
+
 const POST_MUTATION = gql`
   mutation PostMutation($description: String!, $url: String!) {
     post(description: $description, url: $url) {

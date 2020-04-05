@@ -3,6 +3,8 @@ import { withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 import Link from './Link'
 
+/* eslint-disable */
+
 const FEED_SEARCH_QUERY = gql`
   query FeedSearchQuery($filter: String!) {
     feed(filter: $filter) {

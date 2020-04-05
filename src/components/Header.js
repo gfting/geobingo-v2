@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import { AUTH_TOKEN } from '../constants'
 
+/* eslint-disable */
+
 class Header extends Component {
   render() {
     const authToken = localStorage.getItem(AUTH_TOKEN)
