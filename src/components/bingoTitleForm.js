@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 const prompt = 'Enter Your Bingo Theme';
 
@@ -8,6 +9,7 @@ class BingoTitleForm extends React.Component {
         theme: 'Untitled Bingo Game',
         rows: 0,
         cols: 0,
+        redirect: false,
     };
 
     onSubmitThemeForm = e => {
@@ -17,10 +19,14 @@ class BingoTitleForm extends React.Component {
             theme: e.target.elements.theme.value,
             rows: e.target.elements.rows.value,
             cols: e.target.elements.cols.value,
+            redirect: true,
         });
     }
 
     render() {
+        if (this.state.redirect === true)
+            return <Redirect to='/test2' />
+
         return (
             <div>
                 <h1>Your Bingo Theme is: {this.state.theme}</h1>
