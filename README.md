@@ -1,4 +1,4 @@
-# survey-engine
+# geobingo-v2
 
 This project is under construction with MongoDB, Express, Node.js, and React.
 
@@ -19,4 +19,3 @@ This project is under construction with MongoDB, Express, Node.js, and React.
 - Afterwards and for all future runs, run `npm run server` in one terminal, and then `npm run build`, then `npm run start`.
 
 # Notes
-# geobingo-v2
