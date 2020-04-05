@@ -1,12 +1,12 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import BingoCell from './BingoCell';
 import EditableLabel from 'react-inline-editing';
 
 class BingoTable extends React.Component {
     state = {
         list: [['Empty','Empty','Empty','Empty','Empty'],['Empty','Empty','Empty','Empty','Empty'],['Empty','Empty','Free Space','Empty','Empty'],['Empty','Empty','Empty','Empty','Empty'],['Empty','Empty','Empty','Empty','Empty']],
         maxLength: 24,
+        testlist: []
     }
 
     handleSubmitForm = event => {
