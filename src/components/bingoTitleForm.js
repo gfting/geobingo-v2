@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from './layout';
 
 const prompt = 'Enter Your Bingo Theme';
 
@@ -11,7 +10,7 @@ class BingoTitleForm extends React.Component {
         cols: 0,
     };
 
-    onSubmitThemeForm(e) {
+    onSubmitThemeForm = e => {
         e.preventDefault();
         this.setState({
             hideTheme: false,
@@ -19,7 +18,7 @@ class BingoTitleForm extends React.Component {
             rows: e.target.elements.rows.value,
             cols: e.target.elements.cols.value,
         });
-    };
+    }
 
     render() {
         return (
@@ -36,7 +35,7 @@ class BingoTitleForm extends React.Component {
             </div>
         );
     }
-};
+}
 
 
 export default BingoTitleForm;
