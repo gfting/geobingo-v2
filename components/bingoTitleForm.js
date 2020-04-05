@@ -2,23 +2,36 @@ import React from 'react';
 import Layout from './layout';
 
 const prompt = 'Enter Your Bingo Theme';
-let hideTheme = true;
-let theme;
-
-const onSubmitThemeForm = (e) => {
-    e.preventDefault();
-    theme = e.target.elements.btf.value;
-    hideTheme = false;
-};
 
 class BingoTitleForm extends React.Component {
+    state = {
+        hideTheme: true,
+        theme: '',
+        rows: 0,
+        cols: 0,
+    };
+
+    onSubmitThemeForm(e) {
+        e.preventDefault();
+        this.setState({
+            hideTheme: false,
+            theme: e.target.elements.theme.value,
+            rows: e.target.elements.rows.value,
+            cols: e.target.elements.cols.value,
+        });
+    };
+
     render() {
         return (
             <div>
-                {<h1>Your Bingo Theme is: {theme}</h1>}
-                <form onSubmit = {onSubmitThemeForm}>
-                    <input type="text" name="btf"/>
+                <h1>Your Bingo Theme is: {this.state.theme}</h1>
+                <form onSubmit = {this.onSubmitThemeForm}>
+                    <input type="text" name="theme"/>
                     <button>{prompt}</button>
+                    <input type="number" name="rows"/>
+                    <button>{'# of rows'}</button>
+                    <input type="number" name="cols"/>
+                    <button>{'# of columns'}</button>
                 </form>
             </div>
         );
