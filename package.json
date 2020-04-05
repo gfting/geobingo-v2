@@ -1,7 +1,7 @@
 {
-	"name": "survey-engine",
+	"name": "Geobingo2",
 	"version": "1.0.0",
-	"description": "Anonymous survey engine for the Percentage Project.",
+	"description": "Geobingo – play bingo with friends worldwide",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
