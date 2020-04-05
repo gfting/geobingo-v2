@@ -5,7 +5,7 @@ const prompt = 'Enter Your Bingo Theme';
 class BingoTitleForm extends React.Component {
     state = {
         hideTheme: true,
-        theme: '',
+        theme: 'Untitled Bingo Game',
         rows: 0,
         cols: 0,
     };
@@ -25,11 +25,11 @@ class BingoTitleForm extends React.Component {
             <div>
                 <h1>Your Bingo Theme is: {this.state.theme}</h1>
                 <form onSubmit = {this.onSubmitThemeForm}>
-                    <input type="text" name="theme"/>
+                    <input type="text" name="theme" placeholder="Custom Theme"/>
                     <button>{prompt}</button>
-                    <input type="number" name="rows"/>
+                    <input type="number" name="rows" defaultValue="5"/>
                     <button>{'# of rows'}</button>
-                    <input type="number" name="cols"/>
+                    <input type="number" name="cols" defaultValue="5"/>
                     <button>{'# of columns'}</button>
                 </form>
             </div>
